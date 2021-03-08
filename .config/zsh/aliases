@@ -10,7 +10,7 @@ alias rice="git --git-dir=$HOME/.config/artix-rice.git/ --work-tree=$HOME"
 alias startx="startx $XINITRC"
 
 # Auto substitute `sudo`
-for x in mount umount sv pacman shutdown reboot; do
+for x in shutdown reboot pacman sv mount umount ; do
 	alias $x="sudo $x"
 done
 
@@ -33,6 +33,7 @@ alias                                                   \
 # Common commands abbreviation
 alias                               \
   e="$EDITOR"                       \
+  E="sudo $EDITOR"                  \
   ka="killall"                      \
   p="ping"                          \
   P="sudo pacman"                   \
