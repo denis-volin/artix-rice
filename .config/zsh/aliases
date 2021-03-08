@@ -1,0 +1,50 @@
+#!/bin/sh
+
+# Always use neovim
+alias vim="nvim" vimdiff="nvim -d"
+
+# Rice repo control
+alias rice="git --git-dir=$HOME/.config/artix-rice.git/ --work-tree=$HOME"
+
+# Use $XINITRC variable
+alias startx="startx $XINITRC"
+
+# Auto substitute `sudo`
+for x in mount umount sv pacman shutdown reboot; do
+	alias $x="sudo $x"
+done
+
+# Verbosity and interactivity settings
+alias              \
+  cp="cp -iv"      \
+  mv="mv -iv"      \
+  rm="rm -vI"      \
+  ln="ln -v"       \
+  mkd="mkdir -pv"  \
+
+# Colorize commands when possible
+alias                                                   \
+  ls="ls -hN --color=auto --group-directories-first"    \
+  ll="ls -lAhN --color=auto --group-directories-first"  \
+  grep="grep --color=auto"                              \
+  diff="diff --color=auto"                              \
+  ccat="highlight --out-format=ansi"                    \
+
+# Common commands abbreviation
+alias                               \
+  e="$EDITOR"                       \
+  ka="killall"                      \
+  p="ping"                          \
+  P="sudo pacman"                   \
+  h="history -i -100000 | less +G"  \
+  hs="history -i -100000 | grep"    \
+
+# For `pass`
+alias                                        \
+  ppull="pass git pull"                      \
+  ppush="pass git push"                      \
+  psync="pass git fetch && pass git status"  \
+  padd="pass insert -m"                      \
+  pedit="pass edit"                          \
+  pwg="pwgen -cns"                           \
+  pw="pwgen -cns 16 1"                       \
