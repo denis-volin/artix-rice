@@ -11,7 +11,7 @@ alias startx="startx $XINITRC"
 
 # Auto substitute `sudo`
 for x in poweroff reboot pacman sv mount umount ; do
-	alias $x="sudo $x"
+  alias $x="sudo $x"
 done
 
 # Verbosity and interactivity settings

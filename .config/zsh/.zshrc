@@ -1,6 +1,6 @@
 autoload -U colors && colors  # Load colors
 setopt autocd                 # Automatically cd into typed directory
-stty stop undef	              # Disable ctrl-s to freeze terminal
+stty stop undef                # Disable ctrl-s to freeze terminal
 source "$ZDOTDIR/aliases"     # Load aliases
 
 # Change prompt
@@ -62,7 +62,7 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
-bindkey -s '^o' 'lfcd\n'
+bindkey -s '^o' 'lfcd\r'
 
 # Edit line in vim with ctrl-e
 autoload edit-command-line; zle -N edit-command-line
@@ -70,16 +70,16 @@ bindkey '^e' edit-command-line
 
 # Colored man pages
 function man() {
-	env \
-		LESS_TERMCAP_md=$(tput bold; tput setaf 4) \
-		LESS_TERMCAP_me=$(tput sgr0) \
-		LESS_TERMCAP_mb=$(tput blink) \
-		LESS_TERMCAP_us=$(tput setaf 2) \
-		LESS_TERMCAP_ue=$(tput sgr0) \
-		LESS_TERMCAP_so=$(tput smso) \
-		LESS_TERMCAP_se=$(tput rmso) \
-		PAGER="${commands[less]:-$PAGER}" \
-		man "$@"
+  env \
+    LESS_TERMCAP_md=$(tput bold; tput setaf 4) \
+    LESS_TERMCAP_me=$(tput sgr0) \
+    LESS_TERMCAP_mb=$(tput blink) \
+    LESS_TERMCAP_us=$(tput setaf 2) \
+    LESS_TERMCAP_ue=$(tput sgr0) \
+    LESS_TERMCAP_so=$(tput smso) \
+    LESS_TERMCAP_se=$(tput rmso) \
+    PAGER="${commands[less]:-$PAGER}" \
+    man "$@"
 }
 
 # Load syntax highlighting (should be last)
