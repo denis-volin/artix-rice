@@ -1,6 +1,6 @@
 autoload -U colors && colors  # Load colors
 setopt autocd                 # Automatically cd into typed directory
-stty stop undef                # Disable ctrl-s to freeze terminal
+stty stop undef               # Disable ctrl-s to freeze terminal
 source "$ZDOTDIR/aliases"     # Load aliases
 
 # Change prompt
@@ -25,9 +25,9 @@ bindkey "^[[B" history-beginning-search-forward-end
 bindkey "^k" history-beginning-search-backward-end
 bindkey "^j" history-beginning-search-forward-end
 
-# Mid-word, ignore case, hidden files completion
+# Ignore case & hidden files completion
 autoload -U compinit
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|?=** r:|?=**'
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
