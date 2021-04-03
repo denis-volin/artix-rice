@@ -1,0 +1,16 @@
+#!/bin/sh
+
+xrdb $XDG_CONFIG_HOME/x11/xresources &
+setxkbmap -layout us,ru
+xkbcomp ~/.config/x11/layout.xkb $DISPLAY &
+xset r rate 300 50 &
+
+xwallpaper --zoom $XDG_DATA_HOME/wallpaper &
+unclutter --timeout 1 &
+picom -b &
+xset s 600 5
+xss-lock -n /usr/lib/xsecurelock/dimmer -l -- env XSECURELOCK_BLANK_TIMEOUT=0 xsecurelock &
+
+sxhkd &
+dwmblocks &
+nm-applet &
