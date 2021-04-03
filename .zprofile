@@ -21,3 +21,5 @@ export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 # `less` syntax highlighting
 export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
 export LESS=' -R '
+
+[ "$(tty)" = "/dev/tty1" ] && exec startx $XINITRC
