@@ -3,10 +3,7 @@ setopt autocd                 # Automatically cd into typed directory
 stty stop undef               # Disable ctrl-s to freeze terminal
 source "$ZDOTDIR/aliases"     # Load aliases
 
-# Change prompt
-[ $EUID -ne 0 ] &&
-  PS1="%{$fg[green]%}[%B%{$fg[green]%}%n%{$fg[yellow]%}@%{$fg[cyan]%}%M %{$fg[magenta]%}%~%b%{$fg[green]%}]%{$reset_color%}$ " ||
-  PS1="%{$fg[red]%}[%B%{$fg[red]%}%n%{$fg[yellow]%}@%{$fg[cyan]%}%M %{$fg[magenta]%}%~%b%{$fg[red]%}]%{$reset_color%}# "
+PROMPT=$'\n%F{107}%~%{%f%}\n%{%F{white}%}❯%{%f%} '
 
 # History settings
 HISTSIZE=100000
