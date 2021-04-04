@@ -1,0 +1,21 @@
+# Change keyboard layout
+ctrl + space
+  xkb-switch -n && pkill -RTMIN+11 dwmblocks
+
+# Toggle external display
+XF86Launch1
+  autorandr --change
+
+# Volime control
+XF86AudioRaiseVolume
+  pulsemixer --change-volume +5 && pkill -RTMIN+10 dwmblocks
+
+XF86AudioLowerVolume
+  pulsemixer --change-volume -5 && pkill -RTMIN+10 dwmblocks
+
+XF86AudioMute
+  pulsemixer --toggle-mute && pkill -RTMIN+10 dwmblocks
+
+# App bindings
+mod1 + o ; w
+  firefox
