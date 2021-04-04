@@ -1,3 +1,4 @@
+set bg=light
 syntax on
 set undofile
 
