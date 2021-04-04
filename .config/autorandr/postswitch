@@ -1,0 +1,4 @@
+#!/bin/sh
+
+xwallpaper --zoom $XDG_DATA_HOME/wallpaper
+killall -10 picom
