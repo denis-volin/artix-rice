@@ -3,8 +3,12 @@ ctrl + space
   xkb-switch -n && pkill -RTMIN+11 dwmblocks
 
 # Toggle external display
-XF86Launch1
+mod1 + XF86Launch1
   autorandr --change
+
+# Lock session
+XF86Launch1
+  xset s activate
 
 # Volime control
 XF86AudioRaiseVolume
