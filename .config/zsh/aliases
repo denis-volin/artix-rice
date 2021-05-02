@@ -14,6 +14,10 @@ for x in poweroff reboot pacman sv mount umount ; do
   alias $x="sudo $x"
 done
 
+# SSH, but do not check HostKey and do not save it to ~/.ssh/knows_hosts 
+alias sshN="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+alias scpN="scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+
 # Verbosity and interactivity settings
 alias              \
   cp="cp -iv"      \

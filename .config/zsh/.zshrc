@@ -1,7 +1,8 @@
-autoload -U colors && colors  # Load colors
-setopt autocd                 # Automatically cd into typed directory
-stty stop undef               # Disable ctrl-s to freeze terminal
-source "$ZDOTDIR/aliases"     # Load aliases
+autoload -U colors && colors    # Load colors
+setopt autocd                   # Automatically cd into typed directory
+stty stop undef                 # Disable ctrl-s to freeze terminal
+source "$ZDOTDIR/aliases"       # Load aliases
+source "$ZDOTDIR/aliases-priv"  # Load private aliases
 
 PROMPT=$'\n%F{107}%~%{%f%}\n%{%F{white}%}❯%{%f%} '
 
