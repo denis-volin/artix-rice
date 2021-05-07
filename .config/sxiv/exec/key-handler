@@ -1,0 +1,13 @@
+#!/bin/sh
+
+while read file; do
+  case "$1" in
+    "w")
+      cp "$file" $XDG_DATA_HOME/wallpaper
+      xwallpaper --zoom $XDG_DATA_HOME/wallpaper
+      ;;
+    "d")
+      [ "$(printf "No\\nYes" | dmenu -i -p "Really delete $file?")" = "Yes" ] && rm "$file" && notify-send "$file deleted."
+      ;;
+  esac
+done
