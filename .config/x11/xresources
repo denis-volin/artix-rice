@@ -1,1 +1,3 @@
-solarized.xresources
+#include "solarized.xresources"
+
+Xcursor.size: 16
