@@ -1,3 +1,7 @@
-#include "solarized.xresources"
+!#include "themes/blueberrypie.xresources"
+!#include "themes/doomone.xresources"
+#include "themes/solarized.xresources"
+!#include "themes/cyberpunk.xresources"
+!#include "themes/dracula.xresources"
 
 Xcursor.size: 16
