@@ -1,3 +1,15 @@
+# Launch rofi
+mod1 + space
+  rofi -show drun
+
+# Launch rofi in window modi
+mod1 + w
+  rofi -show window
+
+# Launch rofi in clipboard modi
+mod1 + C
+  rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
 # Change keyboard layout
 ctrl + space
   xkb-switch -n && pkill -RTMIN+11 dwmblocks
@@ -23,3 +35,15 @@ XF86AudioMute
 # App bindings
 mod1 + o ; w
   firefox
+
+mod1 + o ; t
+  thunderbird
+
+mod1 + o ; r
+  remmina
+
+mod1 + o ; k
+  keepassxc
+
+mod1 + o ; m
+  winbox
