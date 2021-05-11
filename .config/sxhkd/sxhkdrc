@@ -10,6 +10,10 @@ mod1 + w
 mod1 + C
   rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
+# Take a screenshot of a selection
+mod1 + s
+  sleep 0.2; scrot -sf ~/pix/screenshots/%Y-%m-%d-%T-screenshot.png
+
 # Change keyboard layout
 ctrl + space
   xkb-switch -n && pkill -RTMIN+11 dwmblocks
@@ -31,6 +35,9 @@ XF86AudioLowerVolume
 
 XF86AudioMute
   pulsemixer --toggle-mute && pkill -RTMIN+10 dwmblocks
+
+XF86AudioMicMute
+  pulsemixer --toggle-mute --id source-1
 
 # App bindings
 mod1 + o ; w
