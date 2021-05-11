@@ -2,4 +2,6 @@
 
 . $XDG_CONFIG_HOME/x11/xprofile
 
-ssh-agent dwm
+while true; do
+  ssh-agent dwm
+done
