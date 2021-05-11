@@ -1,0 +1,18 @@
+// vim:ft=css
+
+configuration {
+  modi: "window,run,drun,ssh";
+  theme: "solarized_alternate";
+  font: "Source Code Pro 12";
+  show-icons: true;
+  terminal: "st";
+  parse-known-hosts: false;
+
+  kb-row-up: "Control+k,Up" ;
+  kb-row-down: "Control+j,Down" ;
+  kb-mode-next: "Control+n";
+  kb-mode-previous: "Control+p";
+
+  kb-accept-entry: "Return" ;
+  kb-remove-to-eol: "" ;
+}
