@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo -n "⌨ "
+xkb-switch | tr [:lower:] [:upper:]
