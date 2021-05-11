@@ -12,6 +12,7 @@ xset s 600 5 &
 xss-lock -n /usr/lib/xsecurelock/dimmer -l -- env XSECURELOCK_BLANK_TIMEOUT=0 xsecurelock &
 autorandr --change &
 
+dunst &
 sxhkd &
 dwmblocks &
 nm-applet &
